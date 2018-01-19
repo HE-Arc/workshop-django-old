@@ -8,11 +8,25 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-dark mb-5">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-5">
     <a class="navbar-brand" href="#">
       <img src="https://vignette.wikia.nocookie.net/starwars/images/e/ea/Resistance_starbird.svg/revision/latest/scale-to-width-down/500?cb=20150913201739" width="30" height="30" class="d-inline-block align-top" alt="">
       Resistance Management Dashboard
     </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarText">
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item">
+           <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="{% url 'dashboard-soldiers' %}">Soldiers</a>
+         </li>
+       </ul>
+
   </nav>
   {% block content %}{% endblock %}
 </body>

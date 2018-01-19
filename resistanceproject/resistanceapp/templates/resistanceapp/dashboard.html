@@ -1,0 +1,93 @@
+{% extends 'resistanceapp/base.html' %}
+
+{% block title %}Resistance dashboard{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="display-4 mb-5">Resistance dashboard</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8">
+
+      <div class="card">
+        <div class="card-header">
+          Global statistics
+        </div>
+
+        <div class="card-body">
+          <div class="card-deck">
+            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+              <div class="card-body">
+                <h1 class="display-1">{{ nb_alive }}</h1>
+                <p class="card-text">That's the number of soldiers (alive) in the resistance's army.</p>
+              </div>
+            </div>
+            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+              <div class="card-body">
+                <h1 class="display-1">{{ nb_dead }}</h1>
+                <p class="card-text">That's the number of dead soldiers in the resistance's army.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mt-4">
+        <div class="card-header">
+          Category distribution
+        </div>
+
+        <div class="card-body">
+
+          <table class="table table-rounded">
+
+          {% for c in categories %}
+            <tr>
+              <td>{{ c.name }}</td>
+              <td>{{ c.soldier_set.count }}</td>
+            </tr>
+          {% endfor %}
+
+        </table>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+    <div class="col-md-4">
+
+      <div class="card">
+        <div class="card-header">
+          Top 3 resistance soldiers
+        </div>
+        <div class="card-body">
+
+          {% for b in best_soldiers %}
+
+          <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+            <div class="card-body">
+              <h3>{{ b.name }}</h3>
+              <p class="badge badge-light">Strength: {{ b.strength }}</p>
+            </div>
+          </div>
+
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+{% endblock %}

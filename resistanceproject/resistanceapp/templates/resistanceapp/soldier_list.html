@@ -20,6 +20,7 @@
           <tr>
             <th>#</th>
             <th>Name</th>
+            <th>Type</th>
             <th>Age</th>
             <th>Strength</th>
             <th>Actions</th>
@@ -34,6 +35,9 @@
         </td>
         <td>
           {{ soldier.name }}
+        </td>
+        <td>
+          <span class="badge badge-primary">{{ soldier.category.name }}</span>
         </td>
         <td>
           {{ soldier.age }}
