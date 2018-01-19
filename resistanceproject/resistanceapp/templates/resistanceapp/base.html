@@ -1,0 +1,19 @@
+<html>
+
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load bootstrap4 %}
+  {% bootstrap_css %}
+  {% bootstrap_javascript jquery='full' %}
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark mb-5">
+    <a class="navbar-brand" href="#">
+      <img src="https://vignette.wikia.nocookie.net/starwars/images/e/ea/Resistance_starbird.svg/revision/latest/scale-to-width-down/500?cb=20150913201739" width="30" height="30" class="d-inline-block align-top" alt="">
+      Resistance Management Dashboard
+    </a>
+  </nav>
+  {% block content %}{% endblock %}
+</body>
+</html>

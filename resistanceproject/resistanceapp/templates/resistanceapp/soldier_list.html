@@ -1,0 +1,57 @@
+{% extends 'resistanceapp/base.html' %}
+
+{% block title %}Resistance Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+
+      <h1 class="display-4">The resistances' soldiers</h1>
+      <p class="lead text-muted">A list of brave and powerful soldiers of the resistance.</p>
+
+      <a href="{% url 'soldier-new' %}" class="btn btn-success btn-sm">Add a brave soldier</a>
+
+      <hr/>
+
+      <table class="table table-bordered mt-5">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Strength</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+      {% for soldier in soldier_list %}
+
+      <tr>
+        <td>
+          {{ soldier.pk }}
+        </td>
+        <td>
+          {{ soldier.name }}
+        </td>
+        <td>
+          {{ soldier.age }}
+        </td>
+        <td>
+          {{ soldier.strength }}
+        </td>
+        <td>
+          <a href="{% url 'soldier-detail' soldier.id %}" class="btn btn-primary btn-sm">Détails</a>
+          <a href="{% url 'soldier-update' soldier.id %}" class="btn btn-success btn-sm">Update</a>
+          <a href="{% url 'soldier-delete' soldier.id %}" class="btn btn-warning btn-sm">Delete</a>
+        </td>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
