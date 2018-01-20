@@ -5,7 +5,7 @@
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
       <h1 class="display-4">{{ soldier.name }}</h1>
       <p>{{ soldier.description }}</p>
 
@@ -26,10 +26,13 @@
             <p class="display-2">{{ soldier.strength }}</p>
           </div>
         </div>
+        <div class="card text-white bg-primary mr-3 mb-3" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Efficiency</h5>
+            <p class="display-2">{{ soldier.get_efficiency|floatformat:3 }}</p>
+          </div>
+        </div>
       </div>
-
-    </div>
-    <div class="col-md-4">
 
     </div>
   </div>

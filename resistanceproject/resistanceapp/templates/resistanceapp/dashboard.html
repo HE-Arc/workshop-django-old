@@ -77,6 +77,8 @@
             <div class="card-body">
               <h3>{{ b.name }}</h3>
               <p class="badge badge-light">Strength: {{ b.strength }}</p>
+              <p class="badge badge-light">Efficiency: {{ b.get_efficiency|floatformat }}</p>
+              <p class="badge badge-light">Old: {{ b.is_old|yesno:"Yes,No,Maybe" }}</p>
             </div>
           </div>
 
