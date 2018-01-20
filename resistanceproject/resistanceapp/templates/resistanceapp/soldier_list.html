@@ -49,6 +49,15 @@
           <a href="{% url 'soldier-detail' soldier.id %}" class="btn btn-primary btn-sm">Détails</a>
           <a href="{% url 'soldier-update' soldier.id %}" class="btn btn-success btn-sm">Update</a>
           <a href="{% url 'soldier-delete' soldier.id %}" class="btn btn-warning btn-sm">Delete</a>
+
+          {% if soldier.alive %}
+          <form method="post" action="{% url 'soldier-dead' %}">
+            {% csrf_token %}
+            <input type="hidden" name="soldier_id" value="{{ soldier.id }}">
+            <button type="submit" class="btn btn-danger btn-sm">Dead :(</button>
+          </form>
+          {% endif %}
+
         </td>
 
       {% endfor %}

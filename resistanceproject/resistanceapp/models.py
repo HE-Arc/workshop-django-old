@@ -1,7 +1,5 @@
 from django.db import models
-
-from django.db.models.signals import post_save
-
+from django.db.models.signals import post_save, post_delete
 
 
 # Create your models here.
@@ -34,4 +32,9 @@ class Category(models.Model):
 def soldier_post_save(sender, **kwargs):
     print("SOLDIER WAS SAVED IN THE SYSTEM")
 
+
+def soldier_post_delete(sender, **kwargs):
+    print("SOLDIER HAS BEEN DELETED")
+
 post_save.connect(soldier_post_save, sender=Soldier)
+post_delete.connect(soldier_post_delete, sender=Soldier)

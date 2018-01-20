@@ -1,12 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.views import generic
+from django.views import generic, View
 from django.urls import reverse_lazy
 
 from.models import Soldier, Category
 
 # Create your views here.
-
 def index(request):
     context = {}
     return render(request, 'resistanceapp/index.html', context)
@@ -45,3 +44,13 @@ class SoldierUpdateView(generic.UpdateView):
 class SoldierDeleteView(generic.DeleteView):
     model = Soldier
     success_url = reverse_lazy('dashboard')
+
+class SoldierDeadOnTheField(View):
+    def post(self, request):
+        print("SOLDIER DEAD ON THE FIELD RIP")
+        s = Soldier.objects.get(pk=request.POST.get("soldier_id"))
+        s.alive = False
+        s.save()
+        return redirect('dashboard-soldiers')
+    def get(self, request):
+        return HttpResponse('Unauthorized, don\'t try to kill my soldiers please.', status=401)
