@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views import generic, View
 from django.urls import reverse_lazy
 
-from.models import Soldier, Category
+#from .models import Soldier, Category
 
 # Create your views here.
 def index(request):
@@ -13,37 +13,28 @@ def index(request):
 class DashboardView(generic.TemplateView):
     template_name = "resistanceapp/dashboard.html"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['categories'] = Category.objects.all()
-        context['best_soldiers'] = Soldier.objects.order_by('-strength')[:3]
-        context['soldiers'] = Soldier.objects.select_related('category').all()
-        context['nb_alive'] = Soldier.objects.filter(alive=True).count()
-        context['nb_dead'] = Soldier.objects.filter(alive=False).count()
-        return context
+    # TODO-6-0 - Write queries for categories, 3 best soldiers by strength, count alive soldiers, count dead soldiers
 
-class SoldierListView(generic.ListView):
-    model = Soldier
 
-    def get_queryset(self):
-        return Soldier.objects.select_related('category').all()
+# TODO-3-0 Create the soldier list view with django class based views
 
-class SoldierDetailView(generic.DetailView):
-    model = Soldier
+# TODO-3-2 Create the soldier detail view with django class based views
 
-class SoldierCreateView(generic.CreateView):
-    model = Soldier
-    fields = ['name', 'category', 'alive', 'age', 'strength']
-    success_url = reverse_lazy('dashboard')
 
-class SoldierUpdateView(generic.UpdateView):
-    model = Soldier
-    fields = ['name', 'category', 'alive', 'age', 'strength']
-    success_url = reverse_lazy('dashboard')
+# TODO-4-0 - Create the soldier create view with django class based views
 
-class SoldierDeleteView(generic.DeleteView):
-    model = Soldier
-    success_url = reverse_lazy('dashboard')
+# TODO-4-2 - Create the soldier update view with django class based views
+
+# TODO-4-4 - Create the soldier delete view with django class based views
+
+
+# TODO-5-5 - Add category field for soldier to create and update views
+
+
+
+
+
+
 
 class SoldierDeadOnTheField(View):
     def post(self, request):

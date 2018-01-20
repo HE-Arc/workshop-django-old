@@ -2,39 +2,27 @@ from django.db import models
 from django.db.models.signals import post_save, post_delete
 
 
-# Create your models here.
-class Soldier(models.Model):
-    name=models.CharField(max_length=200)
-    age=models.IntegerField()
-    strength=models.IntegerField()
-    description=models.TextField()
-    category=models.ForeignKey('Category', on_delete=models.CASCADE)
-    alive=models.BooleanField(default=True)
+# TODO-1-0 - Create Soldier model with name, age, strength, description and alive
+# TODO-1-1 - Add __str__ override for a representation with the name of the soldier
+# Class Soldier(models.Model):
+    # ...
 
-    def __str__(self):
-        return self.name
+# TODO-1-2 - When the model definition is ready, generate the migration (> python manage.py ...)
+# TODO-1-3 - When the migration is generated, apply them (> python manage.py ...)
 
-    def get_efficiency(self):
-        return self.strength / self.age
+# TODO-2-0 - Create a superuser for the django admin (> python manage.py ...)
+# TODO-2-1 - Try the django-admin to create some entries in your DB (localhost:8000/admin)
+# TODO-2-2 - Export your data to automatically create a fixture (> python manage.py ...)
+# TODO-2-3 - Delete your previously created entries from the django-admin and RELOAD them with the fixture
 
-    def is_old(self):
-        return self.age > 60
+# TODO-7-1 - Add a class method to get the efficiency (strength / age) of a soldier
+# TODO-7-2 - Add a class method to get if a soldier is old or not (age > 60 is old)
 
-class Category(models.Model):
-    name=models.CharField(max_length=200)
-    description=models.TextField()
+# TODO-5-1 - Add category field foreign key to soldier
+# TODO-5-2 - Generate migration, apply migration
+# TODO-5-4 - Add some categories from django admin
 
-    def __str__(self):
-        return self.name
+# TODO-5-0 - Create category model with name and description fields with __str__ override
 
-
-
-def soldier_post_save(sender, **kwargs):
-    print("SOLDIER WAS SAVED IN THE SYSTEM")
-
-
-def soldier_post_delete(sender, **kwargs):
-    print("SOLDIER HAS BEEN DELETED")
-
-post_save.connect(soldier_post_save, sender=Soldier)
-post_delete.connect(soldier_post_delete, sender=Soldier)
+# TODO-ADV-0 - Create two methods that will be triggered on specific signals
+# TODO-ADV-1 - Connect the post_save and post_delete signals of Soldier model to your methods

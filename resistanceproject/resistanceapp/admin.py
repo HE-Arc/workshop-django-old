@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Soldier, Category
+# from .models import Soldier, Category
 
 # Register your models here.
-admin.site.register(Soldier)
-admin.site.register(Category)
+# TODO-1-4 - Register Soldier model in django admin
+# TODO-5-4 - Register Category model in admin

@@ -11,7 +11,7 @@
       <h1 class="display-4">The resistances' soldiers</h1>
       <p class="lead text-muted">A list of brave and powerful soldiers of the resistance.</p>
 
-      <a href="{% url 'soldier-new' %}" class="btn btn-success btn-sm">Add a brave soldier</a>
+      <a href="#TODO-4-6" class="btn btn-success btn-sm">Add a brave soldier</a>
 
       <hr/>
 
@@ -27,28 +27,28 @@
           </tr>
         </thead>
 
-      {% for soldier in soldier_list %}
+      {% for soldier in 'todo' %}
 
       <tr>
         <td>
-          {{ soldier.pk }}
+          #TODO-3-4
         </td>
         <td>
-          {{ soldier.name }}
+          #TODO-3-4
         </td>
         <td>
-          <span class="badge badge-primary">{{ soldier.category.name }}</span>
+          <span class="badge badge-primary">Todo</span>
         </td>
         <td>
-          {{ soldier.age }}
+          #TODO-3-4
         </td>
         <td>
-          {{ soldier.strength }}
+          #TODO-3-4
         </td>
         <td>
-          <a href="{% url 'soldier-detail' soldier.id %}" class="btn btn-primary btn-sm">Détails</a>
-          <a href="{% url 'soldier-update' soldier.id %}" class="btn btn-success btn-sm">Update</a>
-          <a href="{% url 'soldier-delete' soldier.id %}" class="btn btn-warning btn-sm">Delete</a>
+          <a href="#TODO-3-4" class="btn btn-primary btn-sm">Détails</a>
+          <a href="#TODO-4-6" class="btn btn-success btn-sm">Update</a>
+          <a href="#TODO-4-6" class="btn btn-warning btn-sm">Delete</a>
 
           {% if soldier.alive %}
           <form method="post" action="{% url 'soldier-dead' %}">
