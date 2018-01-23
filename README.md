@@ -1,12 +1,12 @@
 # README ONLY IF NEEDED
 
+## Installing a package
+
 ```
 pip install django-bootstrap4
 pip freeze
 pip freeze > requirements.txt
 ```
-
-## Installing a package
 
 TODO-0-0 
 
