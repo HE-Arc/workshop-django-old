@@ -3,7 +3,7 @@ Let's resist the rails empire with django 2! A mini workshop to introduce the dj
 
 # How to start
 
-Vous trouverez ci-dessous les quelques commandes qui vous permettront de commencer à travailler sur le workshop.
+Vous trouverez ci-dessous les quelques commandes qui vous permettront de commencer à travailler sur le workshop. #DockerSurcôté
 
 ```
 git clone https://github.com/HE-Arc/demo-django-resistance-app.git .
