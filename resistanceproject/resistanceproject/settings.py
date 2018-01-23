@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'resistanceapp',
-    # TODO-0-0 Add bootstrap4 package to INSTALLED_APPS
+    # TODO-0-0 Install bootstrap4 via pip and add package to INSTALLED_APPS
 ]
 
 MIDDLEWARE = [
