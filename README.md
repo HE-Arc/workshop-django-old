@@ -8,7 +8,6 @@ Vous trouverez ci-dessous les quelques commandes qui vous permettront de commenc
 ```
 git clone https://github.com/HE-Arc/demo-django-resistance-app.git .
 git checkout todo-resistance-app
-cd demo-django-resistance-app
 virtualenv -p python3 demoenv
 . demoenv/bin/activate
 pip install -r requirements.txt
