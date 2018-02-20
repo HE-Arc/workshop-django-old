@@ -1,4 +1,6 @@
 # demo-django-resistance-app
+
+[![Join the chat at https://gitter.im/demo-django-resistance-app/Lobby](https://badges.gitter.im/demo-django-resistance-app/Lobby.svg)](https://gitter.im/demo-django-resistance-app/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Let's resist the rails empire with django 2! A mini workshop to introduce the django web framework.
 
 # How to start
