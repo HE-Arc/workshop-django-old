@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'resistanceapp',
     'bootstrap4',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
