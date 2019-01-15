@@ -3,6 +3,13 @@ from django.contrib import admin
 
 from . import views
 
+# TODO-ADV-1-3 Uncomment thos four lines used by restframework
+#from rest_framework import routers
+#router = routers.DefaultRouter()
+#router.register('users', views.UserViewSet)
+#router.register('soldiers', views.SoldierViewSet)
+
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('dashboard', views.DashboardView.as_view(), name='dashboard'),
@@ -16,4 +23,6 @@ urlpatterns = [
 
 
     #path('dashboard/soldier/deadonthefield', views.SoldierDeadOnTheField.as_view(), name='soldier-dead'),
+
+    # TODO-ADV-1-4 Add restframework API router urls
 ]

@@ -31,7 +31,7 @@ class DashboardView(generic.TemplateView):
 # TODO-5-5 - Add category field for soldier to create and update views
 
 
-
+# TODO-ADV-1-2 - Write views using your serializers https://www.django-rest-framework.org/tutorial/quickstart/#views
 
 
 
