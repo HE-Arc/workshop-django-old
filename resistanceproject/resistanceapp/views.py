@@ -3,7 +3,11 @@ from django.http import HttpResponse
 from django.views import generic, View
 from django.urls import reverse_lazy
 
-from.models import Soldier, Category
+from .models import Soldier, Category
+
+from django.contrib.auth.models import User
+from .serializers import UserSerializer, SoldierSerializer
+from rest_framework import viewsets
 
 # Create your views here.
 def index(request):
@@ -54,3 +58,19 @@ class SoldierDeadOnTheField(View):
         return redirect('dashboard-soldiers')
     def get(self, request):
         return HttpResponse('Unauthorized, don\'t try to kill my soldiers please.', status=401)
+
+
+# This is API related for demo
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = User.objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer
+
+class SoldierViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Soldier.objects.all()
+    serializer_class = SoldierSerializer
