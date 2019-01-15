@@ -21,8 +21,7 @@ urlpatterns = [
     # TODO-4-3 - Add route for the previously created soldier update view
     # TODO-4-5 - Add route for the previously created soldier delete view
 
-
-    #path('dashboard/soldier/deadonthefield', views.SoldierDeadOnTheField.as_view(), name='soldier-dead'),
+    # TODO-8-1 - Add route for SoldierDeadOnTheField
 
     # TODO-ADV-1-4 Add restframework API router urls
 ]

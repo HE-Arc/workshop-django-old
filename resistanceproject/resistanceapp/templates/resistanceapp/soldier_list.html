@@ -50,14 +50,7 @@
           <a href="#TODO-4-6" class="btn btn-success btn-sm">Update</a>
           <a href="#TODO-4-6" class="btn btn-warning btn-sm">Delete</a>
 
-          {% if soldier.alive %}
-          <form method="post" action="{% url 'soldier-dead' %}">
-            {% csrf_token %}
-            <input type="hidden" name="soldier_id" value="{{ soldier.id }}">
-            <button type="submit" class="btn btn-danger btn-sm">Dead :(</button>
-          </form>
-          {% endif %}
-
+          #TODO-8-2 <!-- If soldier is alive, show button to set it dead (POST form) -->
         </td>
 
       {% endfor %}

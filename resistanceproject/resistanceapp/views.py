@@ -16,32 +16,21 @@ class DashboardView(generic.TemplateView):
     # TODO-6-0 - Write queries for categories, 3 best soldiers by strength, count alive soldiers, count dead soldiers
 
 
-# TODO-3-0 Create the soldier list view with django class based views
+    # TODO-3-0 Create the soldier list view with django class based views
 
-# TODO-3-2 Create the soldier detail view with django class based views
-
-
-# TODO-4-0 - Create the soldier create view with django class based views
-
-# TODO-4-2 - Create the soldier update view with django class based views
-
-# TODO-4-4 - Create the soldier delete view with django class based views
+    # TODO-3-2 Create the soldier detail view with django class based views
 
 
-# TODO-5-5 - Add category field for soldier to create and update views
+    # TODO-4-0 - Create the soldier create view with django class based views
+
+    # TODO-4-2 - Create the soldier update view with django class based views
+
+    # TODO-4-4 - Create the soldier delete view with django class based views
 
 
-# TODO-ADV-1-2 - Write views using your serializers https://www.django-rest-framework.org/tutorial/quickstart/#views
+    # TODO-5-5 - Add category field for soldier to create and update views
 
 
+    #TODO-8-0 - Write a view to set a soldier dead :( (sad)
 
-
-class SoldierDeadOnTheField(View):
-    def post(self, request):
-        print("SOLDIER DEAD ON THE FIELD RIP")
-        s = Soldier.objects.get(pk=request.POST.get("soldier_id"))
-        s.alive = False
-        s.save()
-        return redirect('dashboard-soldiers')
-    def get(self, request):
-        return HttpResponse('Unauthorized, don\'t try to kill my soldiers please.', status=401)
+    # TODO-ADV-1-2 - Write views using your serializers https://www.django-rest-framework.org/tutorial/quickstart/#views

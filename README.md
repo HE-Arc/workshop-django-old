@@ -213,6 +213,39 @@ TODO-7-3
 
 `{{ soldier.get_efficiency|floatformat:3 }}`
 
+
+TODO-8-0
+
+```
+class SoldierDeadOnTheField(View):
+    def post(self, request):
+        print("SOLDIER DEAD ON THE FIELD RIP")
+        s = Soldier.objects.get(pk=request.POST.get("soldier_id"))
+        s.alive = False
+        s.save()
+        return redirect('dashboard-soldiers')
+    def get(self, request):
+        return HttpResponse('Unauthorized, don\'t try to kill my soldiers please.', status=401)
+```
+
+TODO-8-1
+
+```
+path('dashboard/soldier/deadonthefield', views.SoldierDeadOnTheField.as_view(), name='soldier-dead'),
+```
+
+TODO-8-2
+
+```
+{% if soldier.alive %}
+<form method="post" action="{% url 'soldier-dead' %}">
+  {% csrf_token %}
+  <input type="hidden" name="soldier_id" value="{{ soldier.id }}">
+  <button type="submit" class="btn btn-danger btn-sm">Dead :(</button>
+</form>
+{% endif %}
+```
+
 ## Advanced play with signals
 
 TODO-ADV-0-0
