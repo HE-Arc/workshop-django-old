@@ -8,7 +8,7 @@ pip freeze
 pip freeze > requirements.txt
 ```
 
-TODO-0-0 
+TODO-0-0
 
 `bootstrap4`
 
@@ -36,29 +36,29 @@ class Soldier(models.Model):
         return self.name
 ```
 
-TODO-1-2 
+TODO-1-2
 
 `python manage.py makemigrations resistanceapp`
 
-TODO-1-3 
+TODO-1-3
 
 `python manage.py migrate`
 
-TODO-1-4 
+TODO-1-4
 
 `admin.site.register(Soldier)`
 
 ## Play with data
 
-TODO-2-0 
+TODO-2-0
 
 `python manage.py createsuperuser`
 
-TODO-2-1 
+TODO-2-1
 
 `localhost:8000/admin and etc`
 
-TODO-2-2 
+TODO-2-2
 
 `python manage.py dumpdata resistanceapp.Soldier > resistanceapp/fixtures/soldiers.json`
 
@@ -128,7 +128,7 @@ class SoldierUpdateView(generic.UpdateView):
     success_url = reverse_lazy('dashboard')
 ```
 
-TODO-4-3 
+TODO-4-3
 
 `path('dashboard/soldier/<pk>/update', views.SoldierUpdateView.as_view(), name='soldier-update'),`
 
@@ -215,7 +215,7 @@ TODO-7-3
 
 ## Advanced play with signals
 
-TODO-ADV-0
+TODO-ADV-0-0
 
 ```
 def soldier_post_save(sender, **kwargs):
@@ -226,9 +226,66 @@ def soldier_post_delete(sender, **kwargs):
     print("SOLDIER HAS BEEN DELETED")
 ```
 
-TODO-ADV-1
+TODO-ADV-0-1
 
 ```
 post_save.connect(soldier_post_save, sender=Soldier)
 post_delete.connect(soldier_post_delete, sender=Soldier)
+```
+
+TODO-ADV-1-0
+
+```
+pip install djangorestframework
+```
+
+```
+rest_framework
+```
+
+TODO-ADV-1-1
+
+```
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ('url', 'username', 'email')
+
+class SoldierSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Soldier
+        fields = ('name', 'age', 'strength', 'description', 'alive')
+```
+
+TODO-ADV-1-2
+
+```
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = User.objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer
+
+class SoldierViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Soldier.objects.all()
+    serializer_class = SoldierSerializer
+```
+
+TODO-ADV-1-3
+
+```
+from rest_framework import routers
+router = routers.DefaultRouter()
+router.register('users', views.UserViewSet)
+router.register('soldiers', views.SoldierViewSet)
+```
+
+TODO-ADV-1-4
+
+```
+path('api/v1/', include(router.urls))
 ```

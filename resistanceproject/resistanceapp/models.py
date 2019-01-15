@@ -24,5 +24,5 @@ from django.db.models.signals import post_save, post_delete
 
 # TODO-5-0 - Create category model with name and description fields with __str__ override
 
-# TODO-ADV-0 - Create two methods that will be triggered on specific signals
-# TODO-ADV-1 - Connect the post_save and post_delete signals of Soldier model to your methods
+# TODO-ADV-0-0 - Create two methods that will be triggered on specific signals
+# TODO-ADV-0-1 - Connect the post_save and post_delete signals of Soldier model to your methods
