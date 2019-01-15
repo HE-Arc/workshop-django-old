@@ -22,6 +22,9 @@ TODO-0-1
 
 ## First django model
 
+https://docs.djangoproject.com/fr/2.1/ref/models/fields/#field-types
+https://docs.djangoproject.com/fr/2.1/topics/migrations/
+
 TODO-1-1
 
 ```
@@ -50,6 +53,9 @@ TODO-1-4
 
 ## Play with data
 
+https://docs.djangoproject.com/fr/2.1/ref/django-admin/#createsuperuser
+https://docs.djangoproject.com/fr/2.1/howto/initial-data/
+
 TODO-2-0
 
 `python manage.py createsuperuser`
@@ -60,7 +66,7 @@ TODO-2-1
 
 TODO-2-2
 
-`python manage.py dumpdata resistanceapp.Soldier > resistanceapp/fixtures/soldiers.json`
+`python manage.py dumpdata resistanceapp.Soldier > resistanceapp/fixtures/soldiers.json --indent=4`
 
 TODO-2-3
 
@@ -70,6 +76,8 @@ Go on the django admin and delete everything
 
 
 ## List and details features
+
+https://docs.djangoproject.com/fr/2.1/topics/class-based-views/
 
 TODO-3-0
 
@@ -103,8 +111,13 @@ TODO-3-4
 
 It's only display. Use urls and your brain for some {{ soldier.xx }}
 
+```Use object_list```
+
+and `soldier` or `object`
 
 ## Create update delete
+
+https://docs.djangoproject.com/fr/2.1/topics/forms/
 
 TODO-4-0
 
@@ -139,6 +152,7 @@ class SoldierDeleteView(generic.DeleteView):
     model = Soldier
     success_url = reverse_lazy('dashboard')
 ```
+
 TODO-4-5
 
 `path('dashboard/soldier/<pk>/delete', views.SoldierDeleteView.as_view(), name='soldier-delete'),`
@@ -180,6 +194,8 @@ TODO-5-5
 category
 
 ## Queries
+
+https://docs.djangoproject.com/en/2.1/topics/db/queries/
 
 TODO-6-0
 
