@@ -7,6 +7,7 @@ pip install django-bootstrap4
 pip freeze
 pip freeze > requirements.txt
 ```
+> If you are in resistanceproject folder the last command is `pip freeze > ../requirements.txt`
 
 TODO-0-0
 
