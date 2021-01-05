@@ -124,3 +124,34 @@ On part de TODO-0-X jusqu'à TODO-7-X, avec à chaque étape quelques lignes à 
 On fait une recherche dans l'arborescence (Ctrl+Shift+F avec VSCode p.ex) et on recherche les TODOS un à un.
 
 Les réponses se trouvent dans le README sur la branche `todo-resistance-app` mais **c'est de la triche de regarder**. C'est seulement en cas d'urgence (je vous vois).
+
+# Q&A
+
+## Séparer le fichiers views.py pour plus de clarté
+**Q: @PedroEmanuelCosta**
+
+Est-ce qu’en suite dans le fichier views.py on regroupe tous les controlleurs de ces modèles ou il est plutôt recommandé de faire plusieurs fichiers séparés plutôt du style à la Laravel ?
+
+**A: @Ishydo**
+
+Si votre projet web de deuxième semestre est qualifiable d'ambitieux (plus de 3 ou 4 modèles), vous risquez effectivement de vous retrouver avec un fichier views.py d'une longueur désagréable. Il est donc intéressant de diviser ce fichier en plusieurs sous fichiers pour répartir la logique en fonction de vos modèles.
+
+Et vous le savez:
+
+    Diviser (views.py) pour mieux régner.
+
+Plus globablement, l'arborescence d'un fresh django project est pas top top. Il existe, par exemple, un truc appelé cookiecutter qui permet d'avoir un django plus facile à déployer par la suite.
+
+--> https://cookiecutter-django.readthedocs.io/en/latest/
+
+Pour plus d'infos, demander à Julien ou Yoan, moi je l'ai jamais utilisé
+
+Mais en gros, voici la recette:
+* Créez un dossier views et supprimer le fichier views.py
+* Ajoutez un fichier __init__.py pour faire du dossier un "package" python utilisable
+* Créez vos X fichiers views en fonction des X modèles (task_views.py, step_views.py, etc)
+  * Comme ici https://github.com/Ishydo/snapventure/tree/master/snapventure-backend/snapventure/views
+* Dans les routes, ne pas oublier de faire appel aux fichiers qui sont désormais dans le package views et non plus au fichiers views.py (qui n'existe plus)!
+  * Comme ici : https://github.com/Ishydo/snapventure/blob/master/snapventure-backend/snapventure/urls.py
+
+Codez vos views dans le bonheur et la clarté d'un code aéré 😍
