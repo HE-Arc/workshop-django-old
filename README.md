@@ -105,8 +105,7 @@ class SoldierDetailView(generic.DetailView):
 
 TODO-3-3
 
-`path('dashboard/soldier/<pk>/', views.SoldierDetailView.as_view(), name='soldier-detail'),
-  `
+`path('dashboard/soldier/<pk>/', views.SoldierDetailView.as_view(), name='soldier-detail'),`
 
 TODO-3-4
 
@@ -118,7 +117,7 @@ and `soldier` or `object`
 
 ## Create update delete
 
-https://docs.djangoproject.com/fr/2.1/topics/forms/
+https://docs.djangoproject.com/fr/3.1/topics/forms/
 
 TODO-4-0
 
@@ -175,22 +174,20 @@ class Category(models.Model):
         return self.name
 ```
 
-TODO-5-1
+Todo-5-2
+
+```
+admin.site.register(Category)
+```
+
+TODO-5-4
 
 ```
 add this
     category=models.ForeignKey('Category', on_delete=models.CASCADE)
 ```
 
-Create new model category
-
-Todo-5-4
-
-```
-admin.site.register(Category)
-```
-
-TODO-5-5
+TODO-5-6
 
 category
 
@@ -258,7 +255,7 @@ TODO-8-2
 <form method="post" action="{% url 'soldier-dead' %}">
   {% csrf_token %}
   <input type="hidden" name="soldier_id" value="{{ soldier.id }}">
-  <button type="submit" class="btn btn-danger btn-sm">Dead :(</button>
+  <button type="submit" class="btn btn-danger btn-sm">Kill :(</button>
 </form>
 {% endif %}
 ```
