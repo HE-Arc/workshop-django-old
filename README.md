@@ -35,7 +35,7 @@ Vous trouverez ci-dessous les quelques commandes qui vous permettront de commenc
 1. D'abord on clone le répo et on checkout sur la bonne branche, bon ça vous connaissez c'est ez ;)
 
 ```
-git clone https://github.com/HE-Arc/demo-django-resistance-app.git .
+git clone https://github.com/SpicyPaper/demo-django-resistance-app.git .
 git checkout todo-resistance-app
 ```
 
