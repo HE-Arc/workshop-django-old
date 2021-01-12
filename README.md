@@ -73,10 +73,10 @@ source .venv/bin/activate
 
 3. On installe les requirements dans notre venv, bon là il existe d'autres techniques.
 
-Il existe des débâts sur le net au sujet d'une meilleure utilisation de se fichier.  
+Il existe des débâts sur le net au sujet d'une meilleure utilisation de ce fichier.  
 Est-ce que c'est bien d'avoir un fichier "requirements.txt" ou autre chose ?
 
-Vous verrez que vous aurez quelques soucis d'utilisation avec se fichier, car vous devez l'update à chaque fois que ajoutez, modifiez ou supprimez quelque chose dedans, mais bon c'est pas non plus trop compliqué, il suffit de suivre une certaine méthode et si vous êtes méthodique, il n'y aura aucun soucis.
+Vous verrez que vous aurez quelques soucis d'utilisation avec ce fichier, car vous devez l'update à chaque fois que ajoutez, modifiez ou supprimez quelque chose dedans, mais bon c'est pas non plus trop compliqué, il suffit de suivre une certaine méthode et si vous êtes méthodique, il n'y aura aucun soucis.
 
 J'ai l'habitude d'utiliser cela, et c'est une technique qui est encore dans la très grande majoritée des cas utilisés et je pense que c'est mieux si vous vous familiarisez au moins une fois avec cette utilisation car c'est celle que vous allez rencontrer quasi partout, mais si ça vous intéresse vous pouvez aller checker pour voir si il n'existe pas une meilleure technique.
 
