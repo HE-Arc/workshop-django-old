@@ -6,19 +6,29 @@ Let's resist the rails empire with django 3! A mini workshop to introduce the dj
 
 ## Python
 
-version >= 3.6
+version >= 3.6  
 Requirement comming from Django : https://docs.djangoproject.com/en/3.1/releases/3.1/#python-compatibility
 
-I used Python 3.8.2
+I used Python 3.8.2  
+- Windows
 ```
 python --version
+```
+- Linux
+```
+python3 --version
 ```
 
 ## pip
 
 I used v20.3
+- Windows
 ```
 pip --version
+```
+- Linux
+```
+pip3 --version
 ```
 
 Upgrade your pip with
@@ -35,7 +45,7 @@ Vous trouverez ci-dessous les quelques commandes qui vous permettront de commenc
 1. D'abord on clone le répo et on checkout sur la bonne branche, bon ça vous connaissez c'est ez ;)
 
 ```
-git clone https://github.com/SpicyPaper/demo-django-resistance-app.git .
+git clone https://github.com/SpicyPaper/demo-django-resistance-app.git
 git checkout todo-resistance-app
 ```
 
@@ -49,9 +59,16 @@ Il existe plusieurs bibliothèques qui permettent toutes de créer des environem
 
 Vous devez le créer une fois au début et/ou à chaque fois que vous clonez le projet **IMPORTANT : l'environement virtuel ne dois JAMAIS être push !** Ensuite une fois qu'il est créer pour la première fois vous n'aurez plus qu'a l'activez, là encore attention il ne faut pas oubliez de le réactiver. Vous pouvez checker que vous avez bien l'extension VSCode "Python" (sinon installez là)
 
+(**Important** : pour l'environement virtuel la hiérarchie du projet peut être légèrement différente en fonction de l'OS ou autres. Contrôlez donc l'architecture des dossiers du venv.)
+- Windows
 ```
 python -m venv .venv
 source .venv/Scripts/activate
+```
+- Linux
+```
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
 3. On installe les requirements dans notre venv, bon là il existe d'autres techniques.
@@ -63,17 +80,28 @@ Vous verrez que vous aurez quelques soucis d'utilisation avec se fichier, car vo
 
 J'ai l'habitude d'utiliser cela, et c'est une technique qui est encore dans la très grande majoritée des cas utilisés et je pense que c'est mieux si vous vous familiarisez au moins une fois avec cette utilisation car c'est celle que vous allez rencontrer quasi partout, mais si ça vous intéresse vous pouvez aller checker pour voir si il n'existe pas une meilleure technique.
 
+- Windows
 ```
 pip install -r requirements.txt
+```
+- Linux
+```
+pip3 install -r requirements.txt
 ```
 
 4. Finalement déplacez-vous dans le projet et démarrez le serveur
 
 > Il est possible de structurer son projet différement, la structure que nous allons utilisez est celle proposez par défaut dans Django, donc encore une fois, c'est bien si essayez de vous familiarisez avec celle. Une fois que vous aurez compris et que vous serez à l'aise n'hésitez pas à chercher comment l'améliorer et l'adapter au mieux pour votre projet.
 
+- Windows
 ```
 cd resistanceproject
 python manage.py runserver
+```
+- Linux
+```
+cd resistanceproject
+python3 manage.py runserver
 ```
 
 Si vous voyez du rouge après la dernière commande (un truc de migrations) et une erreur en atteignant `localhost:8000`... C'est que c'est tout bon !
@@ -88,19 +116,38 @@ Ici vous avez un répo avec un projet déjà existant, en réalité c'est juste 
 
 3. Créer un environement virtuel (venv)
 
+(**Important** : pour l'environement virtuel la hiérarchie du projet peut être légèrement différente en fonction de l'OS ou autres. Contrôlez donc l'architecture des dossiers du venv.)
+- Windows
 ```
 python -m venv .venv
 source .venv/Scripts/activate
 ```
+- Linux
+```
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
 4. Installer Django
 
+- Windows
 ```
 pip install Django
+```
+- Linux
+```
+pip3 install Django
 ```
 
 5. Créer le projet Django et déplacez vous y
 
+> - Modèle
+>
+> *(<project_name> : à remplacer par le nom du projet, dans notre cas "resistanceproject", qui n'est pas forcément un bon choix de nom)*
+> ```
+> django-admin startproject <project_name>
+> cd <project_name>
+> ```
 ```
 django-admin startproject resistanceproject
 cd resistanceproject
@@ -110,9 +157,22 @@ cd resistanceproject
 
 Ici le nom des apps et des projets ont été choisi pour être correspondre au workshop, mais vous pouvez nommez votre projet et vos apps en fonction de votre projet évidemment.
 
+> * Modèle
+>
+> (<app_name> : à remplacer par le nom de l'app et post-fixé avec "app", dans notre cas <app_name> = "resistance" et avec le postfix cela donne donc : "resistanceapp". Ce n'est pas forcément un bon choix de nom, essayez d'être plus précis dans le choix de vos noms, éviter les noms trop générique)*
+> ```
+> python manage.py startapp <app_name>app
+> python manage.py migrate
+> ```
+- Windows
 ```
 python manage.py startapp resistanceapp
 python manage.py migrate
+```
+- Linux
+```
+python3 manage.py startapp resistanceapp
+python3 manage.py migrate
 ```
 
 # Méthodologie
