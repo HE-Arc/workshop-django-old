@@ -15,7 +15,7 @@ urlpatterns = [
     path('dashboard', views.DashboardView.as_view(), name='dashboard'),
 
     # TODO-3-1 - Add route for the previously created soldier list view. Name it dashboard-soldiers
-    path('dashboard/soldiers',views.SoldierListView.as_view(), name='dashboard-soldiers'),
+    path('dashboard/soldiers/',views.SoldierListView.as_view(), name='dashboard-soldiers'),
     # TODO-3-3 - Add route for the previously created soldier detail view. Name soldier-detail
     path('dashboard/soldier/<pk>/',views.SoldierDetailView.as_view(), name='soldier-detail'),
     # TODO-4-1 - Add route for the previously created soldier create view
