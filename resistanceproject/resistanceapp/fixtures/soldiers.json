@@ -7,7 +7,8 @@
         "age": 20,
         "strength": 100,
         "description": "Ninja de Konoha",
-        "alive": true
+        "alive": true,
+        "category": 1
     }
 },
 {
@@ -18,7 +19,8 @@
         "age": 130,
         "strength": -100,
         "description": "Mon précieux",
-        "alive": true
+        "alive": true,
+        "category": 3
     }
 },
 {
@@ -29,7 +31,8 @@
         "age": 2,
         "strength": 30,
         "description": "Pika Pika",
-        "alive": true
+        "alive": true,
+        "category": 1
     }
 },
 {
@@ -40,7 +43,8 @@
         "age": 22,
         "strength": 10000,
         "description": "Gomu Gomu",
-        "alive": true
+        "alive": true,
+        "category": 1
     }
 },
 {
@@ -51,7 +55,8 @@
         "age": 23,
         "strength": 100000,
         "description": "c'est moi",
-        "alive": true
+        "alive": true,
+        "category": 2
     }
 }
 ]
