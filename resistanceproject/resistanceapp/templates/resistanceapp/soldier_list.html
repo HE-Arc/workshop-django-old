@@ -11,7 +11,7 @@
       <h1 class="display-4">The resistances' soldiers</h1>
       <p class="lead text-muted">A list of brave and powerful soldiers of the resistance.</p>
 
-      <a href="#TODO-4-6" class="btn btn-success btn-sm">Add a brave soldier</a>
+      <a href="{% url 'soldier-create' %}" class="btn btn-success btn-sm">Add a brave soldier</a>
 
       <hr/>
 
@@ -27,30 +27,44 @@
           </tr>
         </thead>
 
-      {% for soldier in 'todo' %}
+      {% for soldier in soldier_list  %}
 
       <tr>
         <td>
-          #TODO-3-4
+          {{soldier.pk}}
         </td>
         <td>
-          #TODO-3-4
+          {{soldier.name}}
         </td>
         <td>
-          <span class="badge badge-primary">Todo</span>
+          <span class="badge badge-primary">{{soldier.category.name}}</span>
         </td>
         <td>
-          #TODO-3-4
+          {{soldier.age}}
         </td>
         <td>
-          #TODO-3-4
+          {{soldier.strength}}
         </td>
         <td>
-          <a href="#TODO-3-4" class="btn btn-primary btn-sm">Détails</a>
-          <a href="#TODO-4-6" class="btn btn-success btn-sm">Update</a>
-          <a href="#TODO-4-6" class="btn btn-warning btn-sm">Delete</a>
+          <a href="{% url 'soldier-detail' soldier.pk %}" class="btn btn-primary btn-sm">Détails</a>
+          <a href="{% url 'soldier-update' soldier.pk %}" class="btn btn-success btn-sm">Update</a>
+          <a href="{% url 'soldier-delete' soldier.pk %}" class="btn btn-warning btn-sm">Delete</a>
 
-          #TODO-8-2 <!-- If soldier is alive, show button to set it dead (POST form) -->
+          {% if soldier.alive %}
+          <form method="post" action="{% url 'soldier-dead' %}">
+            {% csrf_token %}
+            <input type="hidden" name="soldier_id" value="{{ soldier.id }}">
+            <button type="submit" class="btn btn-danger btn-sm">Kill :(</button>
+          </form>
+          {% endif %}
+          {% if not soldier.alive%}
+          <form method="post" action="{% url 'soldier-alive' %}">
+            {% csrf_token %}
+            <input type="hidden" name="soldier_id" value="{{ soldier.id }}">
+            <button type="submit" class="btn btn-danger btn-sm">Resucite :)</button>
+          </form>
+          {% endif %}
+<!-- If soldier is alive, show button to set it dead (POST form) -->
         </td>
 
       {% endfor %}

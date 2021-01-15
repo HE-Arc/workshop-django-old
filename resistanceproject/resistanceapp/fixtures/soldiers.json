@@ -3,40 +3,55 @@
     "model": "resistanceapp.soldier",
     "pk": 1,
     "fields": {
-        "name": "Han Solo",
-        "age": 63,
-        "strength": 60,
-        "description": "Han Solo is a character in the Star Wars franchise. In the original film trilogy, Han and his co-pilot, Chewbacca, became involved in the Rebel Alliance's struggle against the Galactic Empire. During the course of the Star Wars narrative, he becomes a chief figure in the Alliance and succeeding galactic governments. Star Wars creator George Lucas described the character as \"a loner who realizes the importance of being part of a group and helping for the common good\".[2] Harrison Ford portrayed the character in the original Star Wars trilogy as well as The Force Awakens. Alden Ehrenreich will portray a young Han Solo as the main protagonist in Solo: A Star Wars Story."
+        "name": "Naruto",
+        "age": 20,
+        "strength": 100,
+        "description": "Ninja de Konoha",
+        "alive": true
     }
 },
 {
     "model": "resistanceapp.soldier",
     "pk": 2,
     "fields": {
-        "name": "Chewbacca",
-        "age": 234,
-        "strength": 60,
-        "description": "Chewbacca, known affectionately to his friends as Chewie, was a Wookiee warrior, smuggler, and resistance fighter who fought in the Clone Wars, the Galactic Civil War, and the conflict between the First Order and the Resistance. He hailed from the planet Kashyyyk and became a Wookiee military leader. During the Clone Wars, he was captured by Trandoshan slavers and held captive on Wasskah, but he worked with a fellow captive, Jedi Commander Ahsoka Tano, to escape. He later commanded Wookiee forces during the Battle of Kashyyyk alongside the Grand Army of the Republic, led by Jedi Master Yoda. During the battle, one of the last ones of the war, Yoda's clone troopers received Order 66 from Supreme Chancellor Palpatine and, with the help of Chewbacca, Yoda escaped Kashyyyk and the destruction of the Jedi Order."
+        "name": "Gollum",
+        "age": 130,
+        "strength": -100,
+        "description": "Mon précieux",
+        "alive": true
     }
 },
 {
     "model": "resistanceapp.soldier",
     "pk": 3,
     "fields": {
-        "name": "Yoda",
-        "age": 900,
-        "strength": 99,
-        "description": "Yoda, a male member of a mysterious species, was a revered Jedi Master who served as the Grand Master of the Jedi Order in the waning days of the Galactic Republic. He was renowned within the Order for his wisdom, powers of the Force, and lightsaber combat, and he lived for nearly 900 years. His time during the last days of the Jedi Order and beyond made him a consequential figure in galactic history."
+        "name": "Pikachu",
+        "age": 2,
+        "strength": 30,
+        "description": "Pika Pika",
+        "alive": true
     }
 },
 {
     "model": "resistanceapp.soldier",
     "pk": 4,
     "fields": {
-        "name": "Jar Jar Binks",
-        "age": 86,
-        "strength": 100,
-        "description": "Jar Jar Binks was a Gungan male military commander and politician who played a key role in the Invasion of Naboo and the Clone Wars that culminated in the fall of the Galactic Republic and the rise of the Galactic Empire. Once an outcast from Gungan society due to his clumsy behavior, he regained favor with his people by helping secure an alliance between the Gungan boss Rugor Nass and Queen Padm\u00e9 Amidala of Naboo, an alliance vital in ending the Trade Federation's invasion of their shared homeworld. In the years that followed, Binks became a Junior Representative for his people in the Galactic Senate, serving alongside Amidala once she became the planet's senator."
+        "name": "Luffy",
+        "age": 22,
+        "strength": 10000,
+        "description": "Gomu Gomu",
+        "alive": true
+    }
+},
+{
+    "model": "resistanceapp.soldier",
+    "pk": 5,
+    "fields": {
+        "name": "Raj",
+        "age": 23,
+        "strength": 100000,
+        "description": "c'est moi",
+        "alive": true
     }
 }
 ]
