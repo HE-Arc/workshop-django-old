@@ -4,4 +4,4 @@ from django.contrib import admin
 
 # Register your models here.
 # TODO-1-4 - Register Soldier model in django admin
-# TODO-5-4 - Register Category model in admin
+# TODO-5-2 - Register Category model in admin
