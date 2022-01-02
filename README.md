@@ -1,6 +1,24 @@
-Un mini workshop permettant d'introduire le Framework web Django.
+# Introduction
 
-# Dépendances
+Workshop Django donné aux étudiants de 3ème année à la HE-Arc dans le cadre du cours de développement web.
+
+L'objectif de ce workshop est de transmettre aux étudiants les bases et les bonnes pratiques de la création d'un projet web avec le Framework Django. Ce workshop a également pour but de fournir un point de départ aux étudiants afin de leur permettre de créer leur projet de semestre.
+
+Les prochaines étapes permettent de mettre en place l'environnement de développement et de suivre le workshop dans son intégralité.
+
+# Explication des branches
+
+Branches générales
+
+- master : la branche contenant la version du README le plus à jour
+- start : la branche contenant le code de départ du workshop Django ainsi que les réponses aux TODOs
+
+Branches par années
+
+- xxxx-start : la branche contenant le code de départ du workshop Django, réalisé avec les étudiants de l'année xxxx
+- xxxx-end : la branche contenant le code solution du workshop Django, réalisé avec les étudiants de l'année xxxx
+
+# Prérequis
 
 ## Python
 
