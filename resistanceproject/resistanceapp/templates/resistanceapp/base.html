@@ -4,6 +4,9 @@
   <title>{% block title %}{% endblock %}</title>
 
   <!-- TODO-0-1 - Load bootstrap4 from the django-bootstrap4 package https://github.com/zostera/django-bootstrap4 -->
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
 </head>
 
 <body>
@@ -22,7 +25,7 @@
            <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
          </li>
          <li class="nav-item">
-           <a class="nav-link" href="#TODO-3-4">Soldiers</a>
+           <a class="nav-link" href="{% url 'dashboard-soldiers' %}">Soldiers</a>
          </li>
        </ul>
 

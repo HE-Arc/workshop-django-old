@@ -1,0 +1,26 @@
+[
+    {
+        "model": "resistanceapp.category",
+        "pk": 1,
+        "fields": {
+            "name": "Ninjah",
+            "description": "Ninja avec H"
+        }
+    },
+    {
+        "model": "resistanceapp.category",
+        "pk": 2,
+        "fields": {
+            "name": "Jedih",
+            "description": "Jedi avec H"
+        }
+    },
+    {
+        "model": "resistanceapp.category",
+        "pk": 3,
+        "fields": {
+            "name": "PokemonH",
+            "description": "Pokemon avec H"
+        }
+    }
+]
