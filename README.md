@@ -145,16 +145,6 @@ python3 manage.py runserver
 
 Si vous voyez du rouge après la dernière commande (un truc de migrations) et une erreur en atteignant `localhost:8000`... C'est que c'est tout bon !
 
-# Méthodologie
-
-L'app est pré-existante. Il faudra remplir les trous (TODOs) pour la rendre fonctionnelle (eeeasy!).
-
-On part de TODO-0-X jusqu'à TODO-7-X, avec à chaque étape quelques lignes à taper.
-
-On fait une recherche dans l'arborescence (Ctrl+Shift+F avec VSCode p.ex) et on recherche les TODO un à un.
-
-Les réponses se trouvent dans le README sur la branche `start` mais **c'est de la triche de regarder**. C'est seulement en cas d'urgence (je vous vois).
-
 ---
 
 **Prêt pour le workshop !**
@@ -163,6 +153,16 @@ Si vous êtes arrivés jusqu'ici, vous êtes prêt pour le workshop.
 La suite vous sera utile lorsque vous devrez créer votre propre projet pour le semestre.
 
 ---
+
+# Méthodologie - Comment va se dérouler le workshop ?
+
+L'app est pré-existante. Il faudra remplir les trous (TODOs) pour la rendre fonctionnelle (eeeasy!).
+
+On part de TODO-0-X jusqu'à TODO-7-X, avec à chaque étape quelques lignes à taper.
+
+On fait une recherche dans l'arborescence (Ctrl+Shift+F avec VSCode p.ex) et on recherche les TODO un à un.
+
+Les réponses se trouvent dans le README sur la branche `start` mais **c'est de la triche de regarder**. C'est seulement en cas d'urgence (je vous vois).
 
 # Initialiser un nouveau projet Django de zéro
 
