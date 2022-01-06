@@ -13,7 +13,7 @@
 
       <a href="#TODO-4-6" class="btn btn-success btn-sm">Add a brave soldier</a>
 
-      <hr/>
+      <hr />
 
       <table class="table table-bordered mt-5">
         <thead>
@@ -27,33 +27,34 @@
           </tr>
         </thead>
 
-      {% for soldier in 'todo' %}
+        {% for soldier in 'todo' %}
 
-      <tr>
-        <td>
-          #TODO-3-4
-        </td>
-        <td>
-          #TODO-3-4
-        </td>
-        <td>
-          <span class="badge badge-primary">Todo</span>
-        </td>
-        <td>
-          #TODO-3-4
-        </td>
-        <td>
-          #TODO-3-4
-        </td>
-        <td>
-          <a href="#TODO-3-4" class="btn btn-primary btn-sm">Détails</a>
-          <a href="#TODO-4-6" class="btn btn-success btn-sm">Update</a>
-          <a href="#TODO-4-6" class="btn btn-warning btn-sm">Delete</a>
+        <tr>
+          <td>
+            #TODO-3-4
+          </td>
+          <td>
+            #TODO-3-4
+          </td>
+          <td>
+            <span class="badge badge-primary">Todo</span>
+          </td>
+          <td>
+            #TODO-3-4
+          </td>
+          <td>
+            #TODO-3-4
+          </td>
+          <td>
+            <a href="#TODO-3-4" class="btn btn-primary btn-sm">Détails</a>
+            <a href="#TODO-4-6" class="btn btn-success btn-sm">Update</a>
+            <a href="#TODO-4-6" class="btn btn-warning btn-sm">Delete</a>
 
-          #TODO-8-2 <!-- If soldier is alive, show button to set it dead (POST form) -->
-        </td>
+            #TODO-8-2
+            <!-- If soldier is alive, show button to set it dead (POST form) -->
+          </td>
 
-      {% endfor %}
+          {% endfor %}
 
     </div>
   </div>

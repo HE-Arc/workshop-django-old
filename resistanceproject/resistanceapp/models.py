@@ -5,7 +5,7 @@ from django.db.models.signals import post_save, post_delete
 # TODO-1-0 - Create Soldier model with name, age, strength, description and alive
 # TODO-1-1 - Add __str__ override for a representation with the name of the soldier
 # Class Soldier(models.Model):
-    # ...
+# ...
 
 # TODO-1-2 - When the model definition is ready, generate the migration (> python manage.py ...)
 # TODO-1-3 - When the migration is generated, apply them (> python manage.py ...)
