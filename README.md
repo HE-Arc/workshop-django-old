@@ -1,5 +1,9 @@
 # README ONLY IF NEEDED
 
+**WARNING** This README is meant to be visualized in "preview" mode, ideally on Github or in any other preview mode that can read and interprete MarkDown.  
+If you open and follow this file in your IDE like VSCode, you could have some troubles with copy-past, etc.  
+It's not a big deal, you just need to be informed and adapt certain element if you read the raw content of this file.
+
 ## Installing a package
 
 ```
@@ -7,7 +11,8 @@ pip install django-bootstrap4
 pip freeze
 pip freeze > requirements.txt
 ```
-> If you are in resistanceproject folder the last command is `pip freeze > ../requirements.txt`
+
+> If you are in `resistanceproject` folder the last command has to be replaced by: `pip freeze > ../requirements.txt`
 
 TODO-0-0
 
@@ -75,7 +80,6 @@ Go on the django admin and delete everything
 
 `python manage.py loaddata soldiers`
 
-
 ## List and details features
 
 https://docs.djangoproject.com/fr/2.1/topics/class-based-views/
@@ -90,11 +94,9 @@ class SoldierListView(generic.ListView):
         return Soldier.objects.all()
 ```
 
-
 TODO-3-1
 
 `path('dashboard/soldiers', views.SoldierListView.as_view(), name='dashboard-soldiers'),`
-
 
 TODO-3-2
 
@@ -111,7 +113,7 @@ TODO-3-4
 
 It's only display. Use urls and your brain for some {{ soldier.xx }}
 
-```Use object_list```
+`Use object_list`
 
 and `soldier` or `object`
 
@@ -226,7 +228,6 @@ def is_old(self):
 TODO-7-3
 
 `{{ soldier.get_efficiency|floatformat:3 }}`
-
 
 TODO-8-0
 
