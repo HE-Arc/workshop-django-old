@@ -143,7 +143,7 @@ cd resistanceproject
 python3 manage.py runserver
 ```
 
-Si vous voyez du rouge après la dernière commande (un truc de migrations) et une erreur en atteignant `localhost:8000`... C'est que c'est tout bon !
+Si vous voyez un truc de "migrations" et une image d'espace en atteignant `localhost:8000`... C'est que c'est tout bon !
 
 ---
 
