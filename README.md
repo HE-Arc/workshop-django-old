@@ -104,7 +104,7 @@ class SoldierListView(generic.ListView):
 
 TODO-3-1
 
-`path('dashboard/soldiers', views.SoldierListView.as_view(), name='dashboard-soldiers'),`
+`path('dashboard/soldiers/', views.SoldierListView.as_view(), name='dashboard-soldiers'),`
 
 TODO-3-2
 
@@ -115,15 +115,17 @@ class SoldierDetailView(generic.DetailView):
 
 TODO-3-3
 
-`path('dashboard/soldier/<pk>/', views.SoldierDetailView.as_view(), name='soldier-detail'),`
+`path('dashboard/soldiers/<pk>/', views.SoldierDetailView.as_view(), name='soldier-detail'),`
 
 TODO-3-4
 
-It's only display. Use urls and your brain for some {{ soldier.xx }}
+Use `object_list` and (`soldier` or `object`)
 
-`Use object_list`
+Some examples:
 
-and `soldier` or `object`
+- `{{ soldier.id }}`
+- `{% url 'soldier-details' soldier.id %}`
+- `{% for soldier in object_list %}`
 
 ## Create update delete
 
