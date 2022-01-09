@@ -31,7 +31,7 @@ TODO-0-1
 https://docs.djangoproject.com/fr/3.2/ref/models/fields/#field-types  
 https://docs.djangoproject.com/fr/3.2/topics/migrations/
 
-TODO-1-1
+TODO-1-0
 
 ```
 class Soldier(models.Model):
@@ -40,6 +40,14 @@ class Soldier(models.Model):
     strength=models.IntegerField()
     description=models.TextField()
     alive=models.BooleanField(default=True)
+```
+
+TODO-1-1
+
+```
+class Soldier(models.Model):
+
+    (...)
 
     def __str__(self):
         return self.name
