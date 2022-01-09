@@ -28,8 +28,8 @@ TODO-0-1
 
 ## First django model
 
-https://docs.djangoproject.com/fr/2.1/ref/models/fields/#field-types
-https://docs.djangoproject.com/fr/2.1/topics/migrations/
+https://docs.djangoproject.com/fr/3.2/ref/models/fields/#field-types  
+https://docs.djangoproject.com/fr/3.2/topics/migrations/
 
 TODO-1-1
 
@@ -59,8 +59,8 @@ TODO-1-4
 
 ## Play with data
 
-https://docs.djangoproject.com/fr/2.1/ref/django-admin/#createsuperuser
-https://docs.djangoproject.com/fr/2.1/howto/initial-data/
+https://docs.djangoproject.com/fr/3.2/ref/django-admin/#createsuperuser  
+https://docs.djangoproject.com/fr/3.2/howto/initial-data/
 
 TODO-2-0
 
@@ -82,7 +82,7 @@ Go on the django admin and delete everything
 
 ## List and details features
 
-https://docs.djangoproject.com/fr/2.1/topics/class-based-views/
+https://docs.djangoproject.com/fr/3.2/topics/class-based-views/
 
 TODO-3-0
 
@@ -195,7 +195,7 @@ category
 
 ## Queries
 
-https://docs.djangoproject.com/en/2.1/topics/db/queries/
+https://docs.djangoproject.com/en/3.2/topics/db/queries/
 
 TODO-6-0
 
