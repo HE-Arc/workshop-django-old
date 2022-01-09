@@ -70,7 +70,7 @@ Vous trouverez ci-dessous les quelques commandes qui vous permettront de commenc
 > SSH recommandé
 
 ```
-git clone git@github.com:HE-Arc/demo-django-resistance-app.git
+git clone git@github.com:HE-Arc/workshop-django.git
 git checkout todo-resistance-app
 ```
 
