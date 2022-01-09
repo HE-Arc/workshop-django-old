@@ -1,4 +1,6 @@
-// Uncomment the following code in case the code needs to be formatted
+// Uncomment the following code if you use a formatter which is not compatible with
+// django-html files (django templates). Check the 2nd source and follow the steps in
+// order to be able to use the following settings.
 // For more information, source: https://github.com/prettier/prettier/issues/5581
 // And other source: https://github.com/vscode-django/vscode-django/issues/23#issuecomment-632108741
 
