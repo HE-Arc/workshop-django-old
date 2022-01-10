@@ -262,22 +262,22 @@ class SoldierDeadOnTheField(View):
         s = Soldier.objects.get(pk=request.POST.get("soldier_id"))
         s.alive = False
         s.save()
-        return redirect('dashboard-soldiers')
+        return redirect('soldiers-list')
     def get(self, request):
-        return HttpResponse('Unauthorized, don\'t try to kill my soldiers please.', status=401)
+        return HttpResponse('Unauthorized! GET never killed any one.', status=401)
 ```
 
 TODO-8-1
 
 ```
-path('dashboard/soldier/deadonthefield', views.SoldierDeadOnTheField.as_view(), name='soldier-dead'),
+path('dashboard/soldier/dead-on-the-field/', views.SoldierDeadOnTheField.as_view(), name='soldiers-dead'),
 ```
 
 TODO-8-2
 
 ```
 {% if soldier.alive %}
-<form method="post" action="{% url 'soldier-dead' %}">
+<form method="post" action="{% url 'soldiers-dead' %}">
   {% csrf_token %}
   <input type="hidden" name="soldier_id" value="{{ soldier.id }}">
   <button type="submit" class="btn btn-danger btn-sm">Kill :(</button>
