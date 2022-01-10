@@ -12,6 +12,7 @@ Branches générales
 
 - master : la branche contenant la version du README le plus à jour
 - start : la branche contenant le code de départ du workshop Django ainsi que les réponses aux TODOs
+- end : la branche contenant le code solution du workshop Django (mais c'est de la triche)
 
 Branches par années
 
