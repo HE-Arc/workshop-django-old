@@ -137,7 +137,7 @@ TODO-4-0
 class SoldierCreateView(generic.CreateView):
     model = Soldier
     fields = ['name', 'alive', 'age', 'strength']
-    success_url = reverse_lazy('dashboard')
+    success_url = reverse_lazy('soldiers-list')
 ```
 
 TODO-4-1
@@ -150,7 +150,7 @@ TODO-4-2
 class SoldierUpdateView(generic.UpdateView):
     model = Soldier
     fields = ['name', 'alive', 'age', 'strength']
-    success_url = reverse_lazy('dashboard')
+    success_url = reverse_lazy('soldiers-list')
 ```
 
 TODO-4-3
@@ -162,7 +162,7 @@ TODO-4-4
 ```
 class SoldierDeleteView(generic.DeleteView):
     model = Soldier
-    success_url = reverse_lazy('dashboard')
+    success_url = reverse_lazy('soldiers-list')
 ```
 
 TODO-4-5
