@@ -22,7 +22,7 @@ from django.db.models.signals import post_save, post_delete
 # TODO-5-1 - Generate migration, apply migration
 # TODO-5-3 - Add some categories from django admin
 # TODO-5-4 - Add category field foreign key to soldier
-# TODO-5-5 - Generate migration, apply migration, IMPORTANT : if you already have Soldiers in your DB you'll have to give a default value when running the makemigrations, be sure to create at least one category and put 1 as default value
+# TODO-5-5 - Generate migration, apply migration, IMPORTANT : if you already have Soldiers in your DB you'll have to give a default value.
 
 # TODO-5-0 - Create category model with name and description fields with __str__ override
 
