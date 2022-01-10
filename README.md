@@ -181,6 +181,9 @@ TODO-5-0
 class Category(models.Model):
     name=models.CharField(max_length=200)
     description=models.TextField()
+    
+    class Meta:
+        verbose_name_plural = "Categories"
 
     def __str__(self):
         return self.name
