@@ -129,7 +129,7 @@ Some examples:
 
 ## Create update delete
 
-https://docs.djangoproject.com/fr/3.1/topics/forms/
+https://docs.djangoproject.com/fr/3.2/topics/forms/
 
 TODO-4-0
 
