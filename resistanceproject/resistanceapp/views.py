@@ -16,7 +16,10 @@ def index(request):
 class DashboardView(generic.TemplateView):
     template_name = "resistanceapp/dashboard.html"
 
-# TODO-6-0 - Write queries for categories, 3 best soldiers by strength, count alive soldiers, count dead soldiers
+    # TODO-6-0 - Write queries for categories, 3 best soldiers by strength, count alive soldiers, count dead soldiers
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     return context
 
 # TODO-3-0 Create the soldier list view with django class based views
 
