@@ -104,7 +104,7 @@ class SoldierListView(generic.ListView):
 
 TODO-3-1
 
-`path('dashboard/soldiers/', views.SoldierListView.as_view(), name='dashboard-soldiers'),`
+`path('dashboard/soldiers/', views.SoldierListView.as_view(), name='soldiers-list'),`
 
 TODO-3-2
 
@@ -115,7 +115,7 @@ class SoldierDetailView(generic.DetailView):
 
 TODO-3-3
 
-`path('dashboard/soldiers/<pk>/', views.SoldierDetailView.as_view(), name='soldier-detail'),`
+`path('dashboard/soldiers/<pk>/', views.SoldierDetailView.as_view(), name='soldiers-detail'),`
 
 TODO-3-4
 
@@ -124,7 +124,7 @@ Use `object_list` and (`soldier` or `object`)
 Some examples:
 
 - `{{ soldier.id }}`
-- `{% url 'soldier-details' soldier.id %}`
+- `{% url 'soldiers-detail' soldier.id %}`
 - `{% for soldier in object_list %}`
 
 ## Create update delete
@@ -142,7 +142,7 @@ class SoldierCreateView(generic.CreateView):
 
 TODO-4-1
 
-`path('dashboard/soldier/new', views.SoldierCreateView.as_view(), name='soldier-new'),`
+`path('dashboard/soldier/new/', views.SoldierCreateView.as_view(), name='soldiers-new'),`
 
 TODO-4-2
 
@@ -155,7 +155,7 @@ class SoldierUpdateView(generic.UpdateView):
 
 TODO-4-3
 
-`path('dashboard/soldier/<pk>/update', views.SoldierUpdateView.as_view(), name='soldier-update'),`
+`path('dashboard/soldier/<pk>/update/', views.SoldierUpdateView.as_view(), name='soldiers-update'),`
 
 TODO-4-4
 
@@ -167,7 +167,7 @@ class SoldierDeleteView(generic.DeleteView):
 
 TODO-4-5
 
-`path('dashboard/soldier/<pk>/delete', views.SoldierDeleteView.as_view(), name='soldier-delete'),`
+`path('dashboard/soldier/<pk>/delete/', views.SoldierDeleteView.as_view(), name='soldiers-delete'),`
 
 TODO-4-6
 
