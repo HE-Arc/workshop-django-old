@@ -197,8 +197,9 @@ admin.site.register(Category)
 
 TODO-5-4
 
+Add this to Soldier class model
+
 ```
-add this
     category=models.ForeignKey('Category', on_delete=models.CASCADE)
 ```
 
