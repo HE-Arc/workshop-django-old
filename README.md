@@ -181,7 +181,7 @@ TODO-5-0
 class Category(models.Model):
     name=models.CharField(max_length=200)
     description=models.TextField()
-    
+
     class Meta:
         verbose_name_plural = "Categories"
 
@@ -231,7 +231,7 @@ def get_context_data(self, **kwargs):
     return context
 ```
 
-## Advanced
+## Model class methods
 
 TODO-7-1
 
@@ -252,6 +252,8 @@ TODO-7-3
 `{{ b.get_efficiency|floatformat:3 }}`
 
 `{{ b.is_old }}`
+
+## Base View for special actions (not part of the default "resource"/"model")
 
 TODO-8-0
 
@@ -285,25 +287,7 @@ TODO-8-2
 {% endif %}
 ```
 
-## Advanced play with signals
-
-TODO-ADV-0-0
-
-```
-def soldier_post_save(sender, **kwargs):
-    print("SOLDIER WAS SAVED IN THE SYSTEM")
-
-
-def soldier_post_delete(sender, **kwargs):
-    print("SOLDIER HAS BEEN DELETED")
-```
-
-TODO-ADV-0-1
-
-```
-post_save.connect(soldier_post_save, sender=Soldier)
-post_delete.connect(soldier_post_delete, sender=Soldier)
-```
+## Advanced Django REST Framework
 
 TODO-ADV-1-0
 
@@ -360,4 +344,24 @@ TODO-ADV-1-4
 
 ```
 path('api/v1/', include(router.urls))
+```
+
+## Advanced play with signals
+
+TODO-ADV-2-0
+
+```
+def soldier_post_save(sender, **kwargs):
+    print("SOLDIER WAS SAVED IN THE SYSTEM")
+
+
+def soldier_post_delete(sender, **kwargs):
+    print("SOLDIER HAS BEEN DELETED")
+```
+
+TODO-ADV-2-1
+
+```
+post_save.connect(soldier_post_save, sender=Soldier)
+post_delete.connect(soldier_post_delete, sender=Soldier)
 ```
