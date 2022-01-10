@@ -15,8 +15,8 @@ from django.db.models.signals import post_save, post_delete
 # TODO-2-2 - Export your data to automatically create a fixture (> python manage.py ...)
 # TODO-2-3 - Delete your previously created entries from the django-admin and RELOAD them with the fixture
 
-# TODO-7-1 - Add a class method to get the efficiency (strength / age) of a soldier
-# TODO-7-2 - Add a class method to get if a soldier is old or not (age > 60 is old)
+    # TODO-7-1 - Add a class method to get the efficiency (strength / age) of a soldier
+    # TODO-7-2 - Add a class method to get if a soldier is old or not (age > 60 is old)
 
 
 # TODO-5-1 - Generate migration, apply migration
