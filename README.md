@@ -316,11 +316,18 @@ class SoldierSerializer(serializers.HyperlinkedModelSerializer):
 TODO-ADV-1-2
 
 ```
+from rest_framework import viewsets
+from django.contrib.auth import get_user_model
+
+from .serializers import SoldierSerializer, UserSerializer
+```
+
+```
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    queryset = User.objects.all().order_by('-date_joined')
+    queryset = get_user_model().objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
 
 class SoldierViewSet(viewsets.ModelViewSet):
@@ -341,6 +348,10 @@ router.register('soldiers', views.SoldierViewSet)
 ```
 
 TODO-ADV-1-4
+
+```
+from django.urls import include
+```
 
 ```
 path('api/v1/', include(router.urls))
