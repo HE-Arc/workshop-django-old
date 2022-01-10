@@ -200,8 +200,16 @@ TODO-5-4
 Add this to Soldier class model
 
 ```
-    category=models.ForeignKey('Category', on_delete=models.CASCADE)
+category=models.ForeignKey('Category', on_delete=models.CASCADE)
 ```
+
+TODO-5-5
+
+If you select (1.) when running makemigrations command, be sure to create  
+at least one category and put 1 as default value.
+
+If you select (2.) when running makemigrations command, be sure to create  
+at least one category and go add default=1 in the Soldier class model.
 
 TODO-5-6
 
