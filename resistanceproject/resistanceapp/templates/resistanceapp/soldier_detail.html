@@ -1,13 +1,13 @@
 {% extends 'resistanceapp/base.html' %}
 
-{% block title %}Details | #TODO-3-4 {% endblock %}
+{% block title %}Details | {{soldier}} {% endblock %}
 
 {% block content %}
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1 class="display-4">#TODO-3-4</h1>
-      <p>#TODO-3-4</p>
+      <h1 class="display-4">{{soldier}}</h1>
+      <p>{{soldier.description}}</p>
 
       <hr />
 
@@ -17,13 +17,13 @@
         <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">Age</h5>
-            <p class="display-2">#TODO-3-4</p>
+            <p class="display-2">{{soldier.age}}</p>
           </div>
         </div>
         <div class="card text-white bg-danger mr-3 mb-3" style="max-width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">Strength</h5>
-            <p class="display-2">#TODO-3-4</p>
+            <p class="display-2">{{soldier.strength}}</p>
           </div>
         </div>
         <div class="card text-white bg-primary mr-3 mb-3" style="max-width: 18rem;">

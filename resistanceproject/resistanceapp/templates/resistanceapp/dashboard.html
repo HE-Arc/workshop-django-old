@@ -23,13 +23,13 @@
           <div class="card-deck">
             <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
               <div class="card-body">
-                <h1 class="display-1">TODO-6-1</h1>
+                <h1 class="display-1">{{nb_alive}}</h1>
                 <p class="card-text">That's the number of soldiers (alive) in the resistance's army.</p>
               </div>
             </div>
             <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
               <div class="card-body">
-                <h1 class="display-1">TODO-6-1</h1>
+                <h1 class="display-1">{{nb_dead}}</h1>
                 <p class="card-text">That's the number of dead soldiers in the resistance's army.</p>
               </div>
             </div>
@@ -46,10 +46,10 @@
 
           <table class="table table-rounded">
 
-            {% for c in '#TODO-6-1' %}
+            {% for c in categories %}
             <tr>
-              <td>TODO-6-1</td>
-              <td>TODO-6-1</td>
+              <td>{{c.name}}</td>
+              <td>{{c.description}}</td>
             </tr>
             {% endfor %}
 
@@ -71,14 +71,14 @@
         </div>
         <div class="card-body">
 
-          {% for b in 'TODO-6-1' %}
+          {% for b in best_soldiers %}
 
           <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
             <div class="card-body">
-              <h3>TODO-6-1</h3>
-              <p class="badge badge-light">Strength: TODO-6-1</p>
-              <p class="badge badge-light">Efficiency: TODO-7-3</p>
-              <p class="badge badge-light">Old: TODO-7-3</p>
+              <h3>{{b.name}}</h3>
+              <p class="badge badge-light">Strength: {{b.strength}}</p>
+              <p class="badge badge-light">Efficiency: {{ b.get_efficiency|floatformat:3 }}</p>
+              <p class="badge badge-light">Old: {{ b.is_old }}</p>
             </div>
           </div>
 
