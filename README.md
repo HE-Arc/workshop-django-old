@@ -249,7 +249,8 @@ def is_old(self):
 
 TODO-7-3
 
-`{{ soldier.get_efficiency|floatformat:3 }}`
+`{{ b.get_efficiency|floatformat:3 }}`
+`{{ b.is_old }}`
 
 TODO-8-0
 
