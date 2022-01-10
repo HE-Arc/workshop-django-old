@@ -3,11 +3,7 @@ from django.contrib import admin
 
 from . import views
 
-# TODO-ADV-1-3 Uncomment thos four lines used by restframework
-#from rest_framework import routers
-#router = routers.DefaultRouter()
-#router.register('users', views.UserViewSet)
-#router.register('soldiers', views.SoldierViewSet)
+# TODO-ADV-1-3 Add a rest_framework router to register the 2 new viewsets that you've created
 
 
 urlpatterns = [
