@@ -1,13 +1,19 @@
 {% extends 'resistanceapp/base.html' %}
 
-{% block title %}Add soldier{% endblock %}
+{% block title %}
+{% if object is None %}
+Add soldier
+{% else %}
+Update soldier
+{% endif %}
+{% endblock %}
 
 {% block content %}
 <div class="container">
   <form action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Save" />
+    <input type="submit" value="{% if object is None %}Save{% else %}Update{% endif %}" />
   </form>
 
 </div>
