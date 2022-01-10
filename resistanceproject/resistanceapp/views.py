@@ -28,7 +28,7 @@ class DashboardView(generic.TemplateView):
 
 # TODO-4-4 - Create the soldier delete view with django class based views
 
-# TODO-5-6 - Add category field for soldier to create and update views
+# TODO-5-6 - Add category field for in Solider's create and update views
 
 # TODO-8-0 - Write a view to set a soldier dead :( (sad)
 
