@@ -1,6 +1,6 @@
 # Introduction
 
-Workshop Django donné aux étudiants de 3ème année à la HE-Arc dans le cadre du cours de développement web.
+Ce Workshop Django est donné aux étudiants de 3ème année à la HE-Arc dans le cadre du cours de développement web.
 
 L'objectif de ce workshop est de transmettre aux étudiants les bases et les bonnes pratiques de la création d'un projet web avec le Framework Django. Ce workshop a également pour but de fournir un point de départ aux étudiants afin de leur permettre de créer leur projet de semestre.
 
@@ -24,9 +24,9 @@ Branches par années
 ## Python
 
 Version >= 3.6  
-Dépendance provenant du site officiel de Django : https://docs.djangoproject.com/en/3.2/releases/3.2/#python-compatibility
+Dépendance provenant du site officiel de Django pour la version utilisé dans ce workshop : https://docs.djangoproject.com/en/3.2/releases/3.2/#python-compatibility
 
-> Le workshop a été testé avec la version 3.8.10
+> Le workshop a été testé avec la version 3.8.10 de Python
 
 - Windows
 
@@ -42,7 +42,7 @@ python3 --version
 
 ## pip
 
-> Le workshop a été testé avec la version 21.3
+> Le workshop a été testé avec la version 21.3 de pip
 
 - Windows
 
@@ -90,10 +90,10 @@ Pour ce faire nous allons utiliser les environnements virtuels qui nous permette
 
 Il existe plusieurs bibliothèques qui permettent toutes de créer des environnements virtuels, vous pouvez utiliser celui que vous souhaitez. Personnellement j'utilise celui disponible directement avec Python.
 
-Vous devez le créer une fois au début et/ou à chaque fois que vous clonez le projet. Ensuite une fois qu'il est créé pour la première fois vous n'aurez plus qu'à l'activer. Attention il ne faut pas oubliez de le réactiver. Vous pouvez checker que vous avez bien l'extension VSCode "Python" (sinon installez là)
+Vous devez le créer une fois au début et/ou à chaque fois que vous clonez le projet. Ensuite une fois qu'il est créé pour la première fois vous n'aurez plus qu'à l'activer. Attention il ne faut pas oublier de le réactiver. Vous pouvez checker que vous avez bien l'extension VSCode "Python" (sinon installez là, elle nous sera utile par la suite).
 
-> **IMPORTANT** : l'environnement virtuel ne doit JAMAIS être push ! (Le fichier créé lors de la création d'un nouvel environnement virtuel)
-> **Important** : l'environnement virtuel peut être construit de manière légèrement différente en fonction de l'OS, de l'environnement virtuel utilisé ou pour d'autre raisons. Contrôlez l'architecture des dossiers de votre venv si vous avez des soucis à exécuter l'une ou l'autre des commandes, cela pourrait venir de cela.
+**IMPORTANT** : l'environnement virtuel ne doit JAMAIS être push ! (Le fichier créé lors de la création d'un nouvel environnement virtuel)
+**Important** : l'environnement virtuel peut être construit de manière légèrement différente en fonction de l'OS, de l'environnement virtuel utilisé ou pour d'autre raisons. Contrôlez l'architecture des dossiers de votre venv si vous avez des soucis à exécuter l'une ou l'autre des commandes, cela pourrait venir de cela.
 
 - Windows
 
@@ -109,11 +109,11 @@ python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Installer les dépendances dans notre venv.
+3. Installer les dépendances dans le venv.
 
-> Il existe des débats sur le net au sujet d'une meilleure utilisation de ce fichier.  
-> Dans ce workshop et dans votre projet de petite taille le fichier requirements.txt est tout à fait adapté.  
-> Mais si vous souhaitez creusez un peu, des techniques plus avancées, vous pouvez checker pipenv (https://pipenv-fork.readthedocs.io/en/latest/basics.html) ou encore poetry (https://python-poetry.org/)
+Il existe des débats sur le net au sujet d'une meilleure utilisation de ce fichier.  
+Dans ce workshop et dans le projet que vous réaliserez lors de ce cours (projet de petite taille), le fichier requirements.txt est tout à fait adapté.  
+Mais si vous souhaitez creuser un peu, des techniques plus avancées existent et vous pouvez checker pipenv (https://pipenv-fork.readthedocs.io/en/latest/basics.html) ou encore poetry (https://python-poetry.org/)
 
 - Windows
 
@@ -129,7 +129,7 @@ pip3 install -r requirements.txt
 
 4. Démarrer le serveur de dev
 
-> Il est possible de structurer son projet différemment, la structure que nous allons utilisez est celle proposée dans Django par défaut. Une fois que vous aurez compris et que vous serez à l'aise n'hésitez pas à chercher comment l'améliorer et l'adapter au mieux pour votre projet.
+Il est possible de structurer son projet différemment, la structure que nous allons utilisez est celle proposée dans Django par défaut. Une fois que vous aurez compris et que vous serez à l'aise n'hésitez pas à chercher comment l'améliorer et l'adapter au mieux pour votre projet.
 
 - Windows
 
@@ -160,9 +160,9 @@ La suite vous sera utile lorsque vous devrez créer votre propre projet pour le 
 
 L'app est pré-existante. Il faudra remplir les trous (TODOs) pour la rendre fonctionnelle (eeeasy!).
 
-On part de TODO-0-X jusqu'à TODO-7-X, avec à chaque étape quelques lignes à taper.
+On part de TODO-0-0 jusqu'à TODO-X-Y, avec à chaque étape quelques lignes à taper.
 
-On fait une recherche dans l'arborescence (Ctrl+Shift+F avec VSCode p.ex) et on recherche les TODO un à un.
+On fait une recherche dans l'arborescence (Ctrl+Shift+F avec VSCode p.ex) et on recherche les TODOs un à un.
 
 Les réponses se trouvent dans le README sur la branche `start` mais **c'est de la triche de regarder**. C'est seulement en cas d'urgence (je vous vois).
 
