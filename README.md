@@ -72,7 +72,8 @@ Vous trouverez ci-dessous les quelques commandes qui vous permettront de commenc
 
 ```
 git clone git@github.com:HE-Arc/workshop-django.git
-git checkout todo-resistance-app
+cd workshop-django
+git checkout start
 ```
 
 2. Créer un environnement virtuel (= virtual environment = venv), c'est très important !
@@ -144,7 +145,7 @@ cd resistanceproject
 python3 manage.py runserver
 ```
 
-Si vous voyez un truc de "migrations" et une image d'espace en atteignant `localhost:8000`... C'est que c'est tout bon !
+Si vous voyez une image d'espace en atteignant `localhost:8000`... C'est que c'est tout bon !
 
 ---
 
