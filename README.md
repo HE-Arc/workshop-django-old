@@ -28,15 +28,13 @@ Dépendance provenant du site officiel de Django pour la version utilisé dans c
 
 > Le workshop a été testé avec la version 3.8.10 de Python
 
-- Windows
-
 ```
+# Windows
 python --version
 ```
 
-- Linux
-
 ```
+# Linux
 python3 --version
 ```
 
@@ -44,21 +42,20 @@ python3 --version
 
 > Le workshop a été testé avec la version 21.3 de pip
 
-- Windows
-
 ```
+# Windows
 pip --version
 ```
 
-- Linux
-
 ```
+# Linux
 pip3 --version
 ```
 
 pip peut être mit à niveau avec :
 
 ```
+# Windows
 python -m pip install --upgrade pip
 ```
 
@@ -92,22 +89,38 @@ Il existe plusieurs bibliothèques qui permettent toutes de créer des environne
 
 Vous devez le créer une fois au début et/ou à chaque fois que vous clonez le projet. Ensuite une fois qu'il est créé pour la première fois vous n'aurez plus qu'à l'activer. Attention il ne faut pas oublier de le réactiver. Vous pouvez checker que vous avez bien l'extension VSCode "Python" (sinon installez là, elle nous sera utile par la suite).
 
-**IMPORTANT** : l'environnement virtuel ne doit JAMAIS être push ! (Le fichier créé lors de la création d'un nouvel environnement virtuel)
-**Important** : l'environnement virtuel peut être construit de manière légèrement différente en fonction de l'OS, de l'environnement virtuel utilisé ou pour d'autre raisons. Contrôlez l'architecture des dossiers de votre venv si vous avez des soucis à exécuter l'une ou l'autre des commandes, cela pourrait venir de cela.
+**IMPORTANT** : les dossiers et fichiers de l'environnement virtuel ne doivent JAMAIS être push !
+**IMPORTANT 2** : l'environnement virtuel peut être construit de manière légèrement différente en fonction de l'OS, de l'environnement virtuel utilisé, ou pour d'autre raisons. Contrôlez l'architecture des dossiers de votre venv si vous avez des soucis à exécuter l'une ou l'autre des commandes suivantes et adaptez les commandes suivantes en fonction.
 
-- Windows
+Créer un nouvel env virtuel
 
 ```
+# Windows
 python -m venv .venv
-source .venv/Scripts/activate
 ```
 
-- Linux
-
 ```
+# Linux
 python3 -m venv .venv
-source .venv/bin/activate
 ```
+
+Activer l'env virtuel
+
+```
+# Windows
+source .venv/Scripts/activate
+# Or
+. .venv/Scripts/activate
+```
+
+```
+# Linux
+source .venv/bin/activate
+# Or
+. .venv/bin/activate
+```
+
+> Si la commande ne fonctionne pas, c'est peut être un problème de permission, essayez d'exécuter en mode admin.
 
 3. Installer les dépendances dans le venv.
 
@@ -115,15 +128,13 @@ Il existe des débats sur le net au sujet d'une meilleure utilisation de ce fich
 Dans ce workshop et dans le projet que vous réaliserez lors de ce cours (projet de petite taille), le fichier requirements.txt est tout à fait adapté.  
 Mais si vous souhaitez creuser un peu, des techniques plus avancées existent et vous pouvez checker pipenv (https://pipenv-fork.readthedocs.io/en/latest/basics.html) ou encore poetry (https://python-poetry.org/)
 
-- Windows
-
 ```
+# Windows
 pip install -r requirements.txt
 ```
 
-- Linux
-
 ```
+# Linux
 pip3 install -r requirements.txt
 ```
 
@@ -131,16 +142,14 @@ pip3 install -r requirements.txt
 
 Il est possible de structurer son projet différemment, la structure que nous allons utilisez est celle proposée dans Django par défaut. Une fois que vous aurez compris et que vous serez à l'aise n'hésitez pas à chercher comment l'améliorer et l'adapter au mieux pour votre projet.
 
-- Windows
-
 ```
+# Windows
 cd resistanceproject
 python manage.py runserver
 ```
 
-- Linux
-
 ```
+# Linux
 cd resistanceproject
 python3 manage.py runserver
 ```
@@ -178,31 +187,27 @@ Ici vous avez un repo avec un projet déjà existant, en réalité c'est juste p
 
 > **Important** : pour l'environnement virtuel la hiérarchie du projet peut être légèrement différente en fonction de l'OS ou autres. Contrôlez donc l'architecture des dossiers du venv.)
 
-- Windows
-
 ```
+# Windows
 python -m venv .venv
 source .venv/Scripts/activate
 ```
 
-- Linux
-
 ```
+# Linux
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
 4. Installer Django
 
-- Windows
-
 ```
+# Windows
 pip install Django
 ```
 
-- Linux
-
 ```
+# Linux
 pip3 install Django
 ```
 
@@ -231,20 +236,19 @@ Ici le nom des apps et des projets ont été choisi pour être correspondre au w
 > (<app_name> : à remplacer par le nom de l'app et postfixer avec "app", dans notre cas <app_name> = "resistance" et avec le postfixe cela donne donc : "resistanceapp". Ce n'est pas forcément un bon choix de nom, essayez d'être plus précis dans le choix de vos noms, éviter les noms trop générique)\*
 >
 > ```
+> # Windows
 > python manage.py startapp <app_name>app
 > python manage.py migrate
 > ```
 
-- Windows
-
 ```
+# Windows
 python manage.py startapp resistanceapp
 python manage.py migrate
 ```
 
-- Linux
-
 ```
+# Linux
 python3 manage.py startapp resistanceapp
 python3 manage.py migrate
 ```
