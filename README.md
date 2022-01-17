@@ -89,7 +89,7 @@ Il existe plusieurs bibliothèques qui permettent toutes de créer des environne
 
 Vous devez le créer une fois au début et/ou à chaque fois que vous clonez le projet. Ensuite une fois qu'il est créé pour la première fois vous n'aurez plus qu'à l'activer. Attention il ne faut pas oublier de le réactiver. Vous pouvez checker que vous avez bien l'extension VSCode "Python" (sinon installez là, elle nous sera utile par la suite).
 
-**IMPORTANT** : les dossiers et fichiers de l'environnement virtuel ne doivent JAMAIS être push !
+**IMPORTANT** : les dossiers et fichiers de l'environnement virtuel ne doivent JAMAIS être push !  
 **IMPORTANT 2** : l'environnement virtuel peut être construit de manière légèrement différente en fonction de l'OS, de l'environnement virtuel utilisé, ou pour d'autre raisons. Contrôlez l'architecture des dossiers de votre venv si vous avez des soucis à exécuter l'une ou l'autre des commandes suivantes et adaptez les commandes suivantes en fonction.
 
 Créer un nouvel env virtuel
