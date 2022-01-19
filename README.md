@@ -287,7 +287,7 @@ TODO-8-2
 {% endif %}
 ```
 
-## Advanced Django REST Framework
+## Advanced - Django REST Framework
 
 TODO-ADV-1-0
 
@@ -357,7 +357,7 @@ from django.urls import include
 path('api/v1/', include(router.urls))
 ```
 
-## Advanced play with signals
+## Advanced - play with signals
 
 TODO-ADV-2-0
 
@@ -376,3 +376,29 @@ TODO-ADV-2-1
 post_save.connect(soldier_post_save, sender=Soldier)
 post_delete.connect(soldier_post_delete, sender=Soldier)
 ```
+
+## Advanced - Vue.js
+
+There are lots of different possibilities to add Vue.js to your Django app:
+
+### Vue in Django as a library (basic)
+
+With this solution you're not doing a SPA, you create components that you'll be able to use in Django templates, your main templating tool will remain the one provided by Django.
+
+This tutorial could help you: https://levelup.gitconnected.com/vue-django-getting-started-88d3f4c2ba62
+
+### Vue in Django as a SPA (advanced)
+
+With this solution, you'll have Vue into your Django project, but you'll be able to create a SPA.
+
+This tutorial could help you: https://betterprogramming.pub/vue-django-using-vue-files-and-the-vue-cli-d6dd8c9145eb
+
+This solution will need a better understanding of what's going on but provides a SPA solution.
+
+### Vue as a separated project (more advanced)
+
+With this solution you'll separate Vue from your Django project, you'll be able to create a SPA and your Django back-end can be a RESTful API, using e.g. the Django REST Framework.
+
+Here again, there are plenty of ways to set up a Vue project: https://v3.vuejs.org/guide/installation.html#installation
+
+My favorite way is using the given Vue CLI (scaffolding): https://v3.vuejs.org/guide/installation.html#cli
