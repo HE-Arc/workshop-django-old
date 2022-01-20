@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views import generic, View
 from django.urls import reverse_lazy
 
-#from .models import Soldier, Category
+from .models import Soldier #, Category
 
 # Create your views here.
 
@@ -22,8 +22,19 @@ class DashboardView(generic.TemplateView):
     #     return context
 
 # TODO-3-0 Create the soldier list view with django class based views
+class SoldierListView(generic.ListView):
+    
+    model = Soldier
+    
+    def get_queryset(self):
+        return Soldier.objects.all()
+    
+    
 
 # TODO-3-2 Create the soldier detail view with django class based views
+class SoldierDetailView(generic.DetailView):
+    
+    model = Soldier
 
 # TODO-4-0 - Create the soldier create view with django class based views
 
