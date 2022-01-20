@@ -5,11 +5,14 @@ from django.db.models.signals import post_save, post_delete
 # TODO-1-0 - Create Soldier model with name, age, strength, description and alive
 class Soldier(models.Model):
     
+    category = models.ForeignKey("Category",on_delete=models.CASCADE)
+    
     name = models.CharField(max_length=200)
     age = models.PositiveIntegerField()
     strength = models.IntegerField()
     description = models.TextField()
     alive = models.BooleanField(default=True)
+    
     
     
 # TODO-1-1 - Add __str__ override for a representation with the name of the soldier
@@ -36,6 +39,16 @@ class Soldier(models.Model):
 # TODO-5-5 - Generate migration, apply migration, IMPORTANT : if you already have Soldiers in your DB you'll have to give a default value.
 
 # TODO-5-0 - Create category model with name and description fields with __str__ override
+class Category(models.Model):
+    
+    name = models.CharField(max_length=200)
+    description = models.TextField()
+    
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name_plural = "Categories"
 
 # TODO-ADV-0-0 - Create two methods that will be triggered on specific signals
 # TODO-ADV-0-1 - Connect the post_save and post_delete signals of Soldier model to your methods

@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views import generic, View
 from django.urls import reverse_lazy
 
-from .models import Soldier #, Category
+from .models import Category, Soldier #, Category
 
 # Create your views here.
 
@@ -40,7 +40,7 @@ class SoldierDetailView(generic.DetailView):
 class SoldierCreateView(generic.CreateView):
     
     model = Soldier
-    fields = ['name','description' ,'alive', 'age', 'strength']
+    fields = ['name','description' ,'alive', 'age', 'strength','category']
     success_url = reverse_lazy('soldiers-list')
     
 
@@ -48,7 +48,7 @@ class SoldierCreateView(generic.CreateView):
 class SoldierUpdateView(generic.UpdateView):
     
     model = Soldier
-    fields = ['name','description', 'alive', 'age', 'strength']
+    fields = ['name','description', 'alive', 'age', 'strength','category']
     success_url = reverse_lazy('soldiers-list')
 
 # TODO-4-4 - Create the soldier delete view with django class based views
@@ -58,7 +58,7 @@ class SoldierDeleteView(generic.DeleteView):
     success_url = reverse_lazy('soldiers-list')
 
 # TODO-5-6 - Add category field for in Solider's create and update views
-
+    
 # TODO-8-0 - Write a view to set a soldier dead :( (sad)
 
 # TODO-ADV-1-2 - Write views using your serializers https://www.django-rest-framework.org/tutorial/quickstart/#views
