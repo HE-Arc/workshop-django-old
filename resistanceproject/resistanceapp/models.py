@@ -3,11 +3,22 @@ from django.db.models.signals import post_save, post_delete
 
 
 # TODO-1-0 - Create Soldier model with name, age, strength, description and alive
+class Soldier(models.Model):
+    
+    name = models.CharField(max_length=200)
+    age = models.PositiveIntegerField()
+    strength = models.IntegerField()
+    description = models.TextField()
+    alive = models.BooleanField(default=True)
+    
+    
 # TODO-1-1 - Add __str__ override for a representation with the name of the soldier
-# Class Soldier(models.Model):
-# ...
+    def __str__(self):
+        return self.name
 
 # TODO-1-2 - When the model definition is ready, generate the migration (> python manage.py ...)
+
+
 # TODO-1-3 - When the migration is generated, apply them (> python manage.py ...)
 
 # TODO-2-0 - Create a superuser for the django admin (> python manage.py ...)
