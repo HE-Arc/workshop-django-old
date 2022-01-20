@@ -11,7 +11,7 @@
       <h1 class="display-4">The resistances' soldiers</h1>
       <p class="lead text-muted">A list of brave and powerful soldiers of the resistance.</p>
 
-      <a href="#TODO-4-6" class="btn btn-success btn-sm">Add a brave soldier</a>
+      <a href="{% url 'soldiers-new' %}" class="btn btn-success btn-sm">Add a brave soldier</a>
 
       <hr />
 
@@ -47,8 +47,8 @@
           </td>
           <td>
             <a href="{% url 'soldiers-detail' soldier.id %}" class="btn btn-primary btn-sm">Détails</a>
-            <a href="#TODO-4-6" class="btn btn-success btn-sm">Update</a>
-            <a href="#TODO-4-6" class="btn btn-warning btn-sm">Delete</a>
+            <a href="{% url 'soldiers-update' soldier.id %}" class="btn btn-success btn-sm">Update</a>
+            <a href="{% url 'soldiers-delete' soldier.id %}" class="btn btn-warning btn-sm">Delete</a>
 
             <!-- TODO-8-2 : If soldier is alive, show button to set it dead (POST form) -->
           </td>

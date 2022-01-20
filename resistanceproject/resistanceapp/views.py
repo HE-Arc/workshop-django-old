@@ -37,10 +37,25 @@ class SoldierDetailView(generic.DetailView):
     model = Soldier
 
 # TODO-4-0 - Create the soldier create view with django class based views
+class SoldierCreateView(generic.CreateView):
+    
+    model = Soldier
+    fields = ['name','description' ,'alive', 'age', 'strength']
+    success_url = reverse_lazy('soldiers-list')
+    
 
 # TODO-4-2 - Create the soldier update view with django class based views
+class SoldierUpdateView(generic.UpdateView):
+    
+    model = Soldier
+    fields = ['name','description', 'alive', 'age', 'strength']
+    success_url = reverse_lazy('soldiers-list')
 
 # TODO-4-4 - Create the soldier delete view with django class based views
+class SoldierDeleteView(generic.DeleteView):
+    
+    model = Soldier
+    success_url = reverse_lazy('soldiers-list')
 
 # TODO-5-6 - Add category field for in Solider's create and update views
 
