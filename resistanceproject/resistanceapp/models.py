@@ -30,8 +30,11 @@ class Soldier(models.Model):
 # TODO-2-3 - Delete your previously created entries from the django-admin and RELOAD them with the fixture
 
     # TODO-7-1 - Add a class method to get the efficiency (strength / age) of a soldier
+    def get_efficiency(self):
+        return self.strength / self.age
     # TODO-7-2 - Add a class method to get if a soldier is old or not (age > 60 is old)
-
+    def is_old(self):
+        return self.age > 60
 
 # TODO-5-1 - Generate migration, apply migration
 # TODO-5-3 - Add some categories from django admin
