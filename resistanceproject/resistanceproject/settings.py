@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # TODO-0-0 Install django-bootstrap4 via pip and add package to INSTALLED_APPS (bootstrap4)
     'bootstrap4',
     # TODO-ADV-1-0 Install djangorestframework via pip and add package to INSTALLED_APPS (rest_framework)
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

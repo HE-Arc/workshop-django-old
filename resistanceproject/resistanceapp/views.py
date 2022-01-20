@@ -5,6 +5,10 @@ from django.urls import reverse_lazy
 
 from .models import Category, Soldier #, Category
 
+from rest_framework import viewsets
+from django.contrib.auth import get_user_model
+
+from .serializers import SoldierSerializer, UserSerializer
 # Create your views here.
 
 
@@ -77,3 +81,18 @@ class SoldierKillView(View):
         return HttpResponse('Unauthorized! GET never killed any one.', status=401)
     
 # TODO-ADV-1-2 - Write views using your serializers https://www.django-rest-framework.org/tutorial/quickstart/#views
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = get_user_model().objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer
+
+class SoldierViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Soldier.objects.all()
+    serializer_class = SoldierSerializer

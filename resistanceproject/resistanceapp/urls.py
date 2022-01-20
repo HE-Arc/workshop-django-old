@@ -3,8 +3,13 @@ from django.contrib import admin
 
 from . import views
 
-# TODO-ADV-1-3 Add a rest_framework router to register the 2 new viewsets that you've created
+from django.urls import include
 
+# TODO-ADV-1-3 Add a rest_framework router to register the 2 new viewsets that you've created
+from rest_framework import routers
+router = routers.DefaultRouter()
+router.register('users', views.UserViewSet)
+router.register('soldiers', views.SoldierViewSet)
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -24,4 +29,5 @@ urlpatterns = [
     path('dashboard/soldiers/<pk>/delete',views.SoldierDeleteView.as_view(),name="soldiers-delete"),
 
     # TODO-ADV-1-4 Add restframework API router urls
+    path('api/v1/', include(router.urls)),
 ]
