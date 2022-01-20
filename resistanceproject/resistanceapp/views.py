@@ -63,6 +63,17 @@ class SoldierDeleteView(generic.DeleteView):
 
 # TODO-5-6 - Add category field for in Solider's create and update views
     
-# TODO-8-0 - Write a view to set a soldier dead :( (sad)
-
+# TODO-8-0 - Write a view to set a soldier dead :( (sad) <- True
+class SoldierKillView(View):
+    
+    def post(self, request):
+        print("SOLDIER DEAD ON THE FIELD PRESS F")
+        s = Soldier.objects.get(pk=request.POST.get("soldier_id"))
+        s.alive = False # F
+        s.save()
+        return redirect('soldiers-list')
+    
+    def get(self, request):
+        return HttpResponse('Unauthorized! GET never killed any one.', status=401)
+    
 # TODO-ADV-1-2 - Write views using your serializers https://www.django-rest-framework.org/tutorial/quickstart/#views
